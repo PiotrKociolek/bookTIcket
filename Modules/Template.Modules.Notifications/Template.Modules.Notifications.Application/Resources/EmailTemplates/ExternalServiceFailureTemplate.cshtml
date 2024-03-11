@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Błąd podczas zapytania do @Model.Provider</title>
+	<style>
+		body {
+			background-color: #eff2f7;
+			font-family: sans-serif;
+		}
+
+		.mail-body {
+			margin: 0 50px 0 50px;
+			background-color: #ffffff;
+			padding: 10px 10px 10px 20px;
+		}
+
+		.mail-header {
+			margin: 0 50px 0 50px;
+			padding: 10px 10px 10px 20px;
+			color: #474ab1
+		}
+	</style>
+</head>
+<body>
+	<div class="mail">
+		<div class="mail-header" >
+			<h1>Wystąpił bład przy zapytaniu do zewnętrznego serwisu @Model.Provider</h1>
+		</div>
+		<div class="mail-body">
+			<p>Kod statusu odpowiedzi: <b>@Model.StatusCode</b>, Kontent odpowiedzi: <b>@Model.Content</b></p>
+
+			<p>Treść Wyjątku: </p>
+			@foreach (var errorMessage in Model.ErrorMessages)
+			{
+				<p style="margin-left: 10px;">@errorMessage</p>
+			}
+			<footer>
+				<p>____________________</p>
+				<p>Ta wiadomość została wygenerowana automatycznie. Prosimy na nią nie odpowiadać.</p>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>

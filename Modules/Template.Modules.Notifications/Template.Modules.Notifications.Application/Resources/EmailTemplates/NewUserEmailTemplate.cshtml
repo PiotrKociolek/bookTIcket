@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Witamy w aplikacji Template</title>
+	<style>
+		body {background-color: #eff2f7; font-family: sans-serif; }
+		.mail-body { margin: 0 50px 0 50px; background-color: #ffffff; padding: 10px 10px 10px 20px;}
+		.mail-header { margin: 0 50px 0 50px; padding: 10px 10px 10px 20px; color: #474ab1}
+		h3 {color: #474ab1}
+	</style>
+</head>
+<body>
+<div class="mail">
+	<div class="mail-header">
+			<h1>Witamy w aplikacji Template</h1>
+	</div>
+	<div class="mail-body">
+		<h3>Jest nam niezmiernie miło poinformować, że dodano Cię do aplikacji Template.</h3>
+
+		<p>Aby utworzyć hasło i aktywowac konto kliknij w poniższy link:</p>
+
+		<a href="@Model.Link">@Model.Link</a>
+
+		<p>Z poważaniem,<br/>
+			Zespół Template</p>
+
+		<footer>
+			<p>____________________</p>
+			<p>Ta wiadomość została wygenerowana automatycznie. Prosimy na nią nie odpowiadać.</p>
+		</footer>
+	</div>
+</div>
+</body>
+</html>
