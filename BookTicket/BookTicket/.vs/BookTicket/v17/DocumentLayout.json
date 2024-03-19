@@ -1,0 +1,104 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\BookTicket\\BookTicket\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|c:\\projects\\bookticket\\bookticket\\bookticket\\model\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|solutionrelative:bookticket\\model\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|c:\\projects\\bookticket\\bookticket\\bookticket\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|solutionrelative:bookticket\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|c:\\projects\\bookticket\\bookticket\\bookticket\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|solutionrelative:bookticket\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|c:\\projects\\bookticket\\bookticket\\bookticket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|solutionrelative:bookticket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|c:\\projects\\bookticket\\bookticket\\bookticket\\migrations\\20240319092524_initialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B590DF-6C05-465E-9E1C-C56123582584}|BookTicket\\BookTicket.csproj|solutionrelative:bookticket\\migrations\\20240319092524_initialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "BookTicket\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "BookTicket\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAzwA8AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T14:31:38.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\Model\\User.cs",
+              "RelativeDocumentMoniker": "BookTicket\\Model\\User.cs",
+              "ToolTip": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\Model\\User.cs",
+              "RelativeToolTip": "BookTicket\\Model\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T14:24:56.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\Model\\Ticket.cs",
+              "RelativeDocumentMoniker": "BookTicket\\Model\\Ticket.cs",
+              "ToolTip": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\Model\\Ticket.cs",
+              "RelativeToolTip": "BookTicket\\Model\\Ticket.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T14:24:32.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20240319092524_Initialization.cs",
+              "DocumentMoniker": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\Migrations\\20240319092524_Initialization.cs",
+              "RelativeDocumentMoniker": "BookTicket\\Migrations\\20240319092524_Initialization.cs",
+              "ToolTip": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\Migrations\\20240319092524_Initialization.cs",
+              "RelativeToolTip": "BookTicket\\Migrations\\20240319092524_Initialization.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T09:25:24.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\appsettings.json",
+              "RelativeDocumentMoniker": "BookTicket\\appsettings.json",
+              "ToolTip": "C:\\Projects\\BookTicket\\BookTicket\\BookTicket\\appsettings.json",
+              "RelativeToolTip": "BookTicket\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-19T09:24:03.899Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
