@@ -8,4 +8,5 @@ public interface IUserService
 {
     Task<User> RegisterUserAsync(RegisterRequestDto dto);
     Task<string> LoginUserAsync(LoginRequestDto dto);
+    Task<User> GetUserById(int userId);
 }

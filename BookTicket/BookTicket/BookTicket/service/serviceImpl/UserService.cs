@@ -1,7 +1,12 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 using BookTicket.Data;
 using BookTicket.Model;
 using BookTicket.Model.Dto_s.request;
+using BookTicket.utilities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BookTicket.service.serviceImpl
 {
@@ -9,7 +14,7 @@ namespace BookTicket.service.serviceImpl
     {
         private readonly AppDbContext _context;
         private readonly IAuthService _authService;
-
+        private readonly AppSettings _appSettings;
 
         public UserService(AppDbContext context)
         {
@@ -59,9 +64,14 @@ namespace BookTicket.service.serviceImpl
             }
 
             // Generate JWT token
-            var jwtToken = _authService.GenerateJwtToken(user.Id.ToString());
+            var jwtToken = generateJwtToken(user).ToString();
 
             return jwtToken;
+        }
+
+        public async Task<User> GetUserById(int userId)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
         }
 
 
@@ -86,6 +96,26 @@ namespace BookTicket.service.serviceImpl
         private void SetRegularRole(User user)
         {
             user.Role = Role.Regular;
+        }
+
+        private async Task<string> generateJwtToken(User user)
+        {
+            //Generate token that is valid for 7 days
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var token = await Task.Run(() =>
+            {
+                var key = Encoding.ASCII.GetBytes(_appSettings.Key);
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(new[] { new Claim("id", user.Id.ToString()) }),
+                    Expires = DateTime.UtcNow.AddDays(7),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                        SecurityAlgorithms.HmacSha256Signature)
+                };
+                return tokenHandler.CreateToken(tokenDescriptor);
+            });
+
+            return tokenHandler.WriteToken(token);
         }
     }
 }
