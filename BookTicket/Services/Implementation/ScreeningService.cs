@@ -1,8 +1,8 @@
 using BookTicket.Data;
 using BookTicket.Model;
-using BookTicket.Model.Dtos.request;
 using BookTicket.Model.Dtos.Screening;
 using BookTicket.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookTicket.Services.Implementation;
 
@@ -15,38 +15,53 @@ public class ScreeningService : IScreeningService
         _context = context;
     }
 
-    public void AddScreening(AddScreeningDto dto)
+ 
+    public async Task AddScreeningAsync(AddScreeningDto dto)
     {
         var newScreening = new Screening
         {
-            MovieId = dto.MovieId,
+            MovieTitle = dto.MovieTitle,
             DateAndTime = dto.Time,
-            ScreeningRoom = dto.Room, 
+            ScreeningRoom = dto.Room,
             TotalTickets = dto.RoomCapacity,
-            BookedTickets = 0 
+            BookedTickets = 0
         };
+
         _context.Screenings.Add(newScreening);
-        _context.SaveChanges();
-
+        await _context.SaveChangesAsync();
     }
 
-
-    public void EditScreening(EditScreeningDto dto)
+    public async Task EditScreeningAsync(EditScreeningDto dto)
     {
-        var editScreening = _context.Screenings.FirstOrDefault(s => s.Id == dto.ScreeningId);
-        editScreening.MovieId = dto.ScreeningId;
-        editScreening.DateAndTime = dto.Time;
-        editScreening.ScreeningRoom = dto.ScreeningRoom;
-        editScreening.TotalTickets = dto.RoomCapacity;
+        var editScreening = await _context.Screenings.FirstOrDefaultAsync(s => s.Id == dto.ScreeningId);
+        if (editScreening != null)
+        {
+            editScreening.MovieTitle = dto.MovieTitle;
+            editScreening.DateAndTime = dto.Time;
+            editScreening.ScreeningRoom = dto.ScreeningRoom;
+            editScreening.TotalTickets = dto.RoomCapacity;
 
-        _context.SaveChanges();
+            await _context.SaveChangesAsync();
+        }
+        else
+        {
+            throw new Exception("No screening with selected id");
+        }
     }
 
-    public void DeleteScreening(DeleteScreeningDto dto)
+    public async Task DeleteScreeningAsync(DeleteScreeningDto dto)
     {
-        var screeningToDelete = _context.Screenings.FirstOrDefault(s => s.Id == dto.ScreeningId);
-        _context.Screenings.Remove(screeningToDelete);
-        _context.SaveChanges(); 
+        var screeningToDelete = await _context.Screenings.FirstOrDefaultAsync(s => s.Id == dto.ScreeningId);
+        if (screeningToDelete != null)
+        {
+            _context.Screenings.Remove(screeningToDelete);
+            await _context.SaveChangesAsync();
+        }
+        else
+        {
+            throw new Exception("No screening with selected id");
+        }
     }
 }
+
     
