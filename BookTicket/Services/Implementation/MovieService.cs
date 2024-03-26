@@ -3,7 +3,8 @@ using BookTicket.Model;
 using BookTicket.Services.Interfaces;
 using System;
 using System.Threading.Tasks;
-using BookTicket.Model.Dtos.request;
+using BookTicket.Model.Dtos.Movie;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookTicket.Services.Implementation
 {
@@ -24,11 +25,23 @@ namespace BookTicket.Services.Implementation
             };
 
             _context.Movies.Add(newMovie);
-            await _context.SaveChangesAsync(); 
+            await _context.SaveChangesAsync();
 
             return newMovie;
         }
 
+        public async Task<Movie> GetMovieAsync(int id)
+        {
+            var movie = await _context.Movies.FirstOrDefaultAsync(x => x.Id == id);
+            return movie;
+        }
+
+
+        public async Task<List<Movie>> GetAllMoviesAsync()
+        {
+            var movies = await _context.Movies.ToListAsync();
+            return movies;
+        }
 
         public void DeleteMovie(MovieDto dto)
         {
@@ -36,7 +49,7 @@ namespace BookTicket.Services.Implementation
             {
                 Id = dto.Id
             };
-              _context.Movies.Remove(movieToDelete);
+            _context.Movies.Remove(movieToDelete);
         }
     }
 }

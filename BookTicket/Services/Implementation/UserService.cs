@@ -4,8 +4,8 @@ using System.Text;
 using BookTicket.Data;
 using BookTicket.Model;
 using BookTicket.Model.Dto_s.request;
+using BookTicket.Model.Dtos.User;
 using BookTicket.Model.Flag;
-using BookTicket.service;
 using BookTicket.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -77,6 +77,18 @@ namespace BookTicket.Services.Implementation
             return await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
         }
 
+        public async Task DeleteUserByIdAsync(int id)
+        {
+            var userToDelete = await _context.Users.FindAsync(id);
+
+            if (userToDelete == null)
+            {
+                throw new KeyNotFoundException($"User with ID {id} does not exist.");
+            }
+
+            _context.Users.Remove(userToDelete);
+            await _context.SaveChangesAsync();
+        }
 
         public async Task<User> AddUserAsync(User user)
         {

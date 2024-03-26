@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UXAW0nBkhIeoA9XzEVRKbmXvejbIM/k6G0tdtKlag3FLx7rSHWStEcUkLBUg/7q7vT4YUXSRxIEJKOsRopz9gg==",
+  "dgSpecHash": "bovGnzQepGRE7EqpoDYicvDYm6/17/kgX4dR5eh1nNlURO0CQd8wPhs4aaPezjUAqFGOqpD7OCZP8MoUb61aug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Piotr\\Downloads\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj",
+  "projectFilePath": "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Piotr\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Piotr\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

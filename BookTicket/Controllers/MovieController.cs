@@ -4,7 +4,7 @@ using BookTicket.Model;
 using BookTicket.Services.Interfaces;
 using System.Net;
 using System.Threading.Tasks;
-using BookTicket.Model.Dtos.request;
+using BookTicket.Model.Dtos.Movie;
 using BookTicket.Model.Flag;
 
 namespace BookTicket.Controllers
@@ -32,6 +32,20 @@ namespace BookTicket.Controllers
         public void DeleteMovie(MovieDto dto)
         {
             _movieService.DeleteMovie(dto);
+        }
+
+        [HttpGet("GetMovie/{id}")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        public async Task<Movie> GetMovieAsync(int id)
+        {
+            return await _movieService.GetMovieAsync(id);
+        }
+
+        [HttpGet("GetAllMovies")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        public async Task<List<Movie>> GetAllMoviesAsync()
+        {
+            return await _movieService.GetAllMoviesAsync();
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Piotr\\Downloads\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj": {}
+    "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Piotr\\Downloads\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj": {
+    "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Piotr\\Downloads\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj",
+        "projectUniqueName": "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj",
         "projectName": "BookTicket",
-        "projectPath": "C:\\Users\\Piotr\\Downloads\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj",
+        "projectPath": "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj",
         "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Piotr\\Downloads\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\obj\\",
+        "outputPath": "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Piotr\\AppData\\Roaming\\NuGet\\NuGet.Config",

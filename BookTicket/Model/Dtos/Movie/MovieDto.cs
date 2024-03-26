@@ -1,4 +1,6 @@
-namespace BookTicket.Model.Dtos.request;
+using System.ComponentModel.DataAnnotations;
+
+namespace BookTicket.Model.Dtos.Movie;
 
 public class MovieDto
 {

@@ -1,6 +1,7 @@
 using System.Net;
 using BookTicket.Model.Dto_s.request;
-using BookTicket.service;
+using BookTicket.Model.Dtos.User;
+using BookTicket.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookTicket.Controllers;
@@ -17,33 +18,26 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("register")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<IActionResult> RegisterUser(RegisterRequestDto dto)
     {
-        try
-        {
-            var newUser = await _userService.RegisterUserAsync(dto);
-            return Ok(newUser);
-        }
-        catch (Exception ex)
-        {
-            if (ex.Message.Contains("already exists"))
-                return BadRequest(ex.Message);
-            else
-                return StatusCode(500, ex.Message);
-        }
+        var newUser = await _userService.RegisterUserAsync(dto);
+        return Ok(newUser);
     }
 
     [HttpPost("login")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<IActionResult> LoginUser(LoginRequestDto dto)
     {
-        try
-        {
-            var token = await _userService.LoginUserAsync(dto);
-            return Ok(new { token });
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(new { message = ex.Message });
-        }
+        var token = await _userService.LoginUserAsync(dto);
+        return Ok(new { token });
+    }
+
+    [HttpDelete("{id}")]
+    [ProducesResponseType((int)HttpStatusCode.OK)]
+    public async Task<IActionResult> DeleteUserByIdAsync(int id)
+    {
+        await _userService.DeleteUserByIdAsync(id);
+        return Ok();
     }
 }

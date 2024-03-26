@@ -1,8 +1,6 @@
 using System.Text;
 using BookTicket.Data;
 using BookTicket.Model;
-using BookTicket.service;
-using BookTicket.service.serviceImpl;
 using BookTicket.Services.Implementation;
 using BookTicket.Services.Interfaces;
 using BookTicket.utilities;
@@ -36,6 +34,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IScreeningService, ScreeningService>();
+builder.Services.AddScoped<ITicketService, TicketService>();
 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

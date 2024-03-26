@@ -3,7 +3,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 
-namespace BookTicket.service.serviceImpl;
+namespace BookTicket.Services.Implementation;
 
 public class AuthService
 {

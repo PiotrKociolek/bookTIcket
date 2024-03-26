@@ -6,7 +6,7 @@ public class Screening
 {
     public int Id { get; set; }
     public int MovieId { get; set; }
-    public string MovieTitle { get; set; }
+    public Movie Movie { get; set; }
     public DateTime DateAndTime { get; set; }
     public ScreeningRoom ScreeningRoom { get; set; }
     public int TotalTickets { get; set; }

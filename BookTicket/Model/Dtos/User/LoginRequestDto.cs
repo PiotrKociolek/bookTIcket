@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace BookTicket.Model.Dto_s.request;
+namespace BookTicket.Model.Dtos.User;
 
 public class LoginRequestDto
 {
