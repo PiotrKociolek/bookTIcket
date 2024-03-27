@@ -16,7 +16,6 @@ namespace BookTicket.Services.Implementation
     public class UserService : IUserService
     {
         private readonly AppDbContext _context;
-        private readonly IAuthService _authService;
         private readonly AppSettings _appSettings;
 
         public UserService(AppDbContext context, IOptions<AppSettings> appSettings)
