@@ -11,7 +11,6 @@ namespace BookTicket.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize]
 public class TicketController : ControllerBase
 {
     private readonly ITicketService _ticketService;
@@ -30,15 +29,13 @@ public class TicketController : ControllerBase
 
     [HttpDelete]
     [ProducesResponseType((int)HttpStatusCode.OK)]
-    [Authorize("Admin")]
     public void DeleteTicketById(int id)
     {
         _ticketService.DeleteTicketById(id);
     }
 
     [HttpGet("{id}")]
-    [ProducesResponseType((int)HttpStatusCode.OK)][Authorize("Admin")]
-
+    [ProducesResponseType((int)HttpStatusCode.OK)]
     public async Task<ActionResult<Ticket>> GetTicket(int id)
     {
         var ticket = await _ticketService.GetTicketDataAsync(id);
@@ -47,7 +44,6 @@ public class TicketController : ControllerBase
 
     [HttpGet("{userId}")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
-    [Authorize("Admin")]
     public async Task<ActionResult<List<Ticket>>> GetTicketsByUser(int userId)
     {
         var tickets = await _ticketService.GetTicketsByUserAsync(userId);

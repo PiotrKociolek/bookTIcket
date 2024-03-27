@@ -9,7 +9,6 @@ namespace BookTicket.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize]
 public class ScreeningController : ControllerBase
 {
     private readonly IScreeningService _screeningService;
@@ -21,8 +20,6 @@ public class ScreeningController : ControllerBase
 
     [HttpPost]
     [ProducesResponseType((int)HttpStatusCode.OK)]
-    [Authorize("Admin")]
-
     public Task AddScreeningAsync(AddScreeningDto dto)
     {
         return _screeningService.AddScreeningAsync(dto);
@@ -31,8 +28,6 @@ public class ScreeningController : ControllerBase
 
     [HttpPut]
     [ProducesResponseType((int)HttpStatusCode.OK)]
-    [Authorize("Admin")]
-
     public Task EditScreeningAsync(EditScreeningDto dto)
     {
         return _screeningService.EditScreeningAsync(dto);

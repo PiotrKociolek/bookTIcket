@@ -49,7 +49,7 @@ public class TicketService : ITicketService
         if (ticketToDelete != null)
         {
             _context.Tickets.Remove(ticketToDelete);
-            _context.SaveChanges(); 
+            _context.SaveChanges();
         }
     }
 
