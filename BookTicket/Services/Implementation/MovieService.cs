@@ -49,7 +49,8 @@ namespace BookTicket.Services.Implementation
             {
                 Id = dto.Id
             };
-            _context.Movies.Remove(movieToDelete);
+            _context.Movies.Where(x => x.Id == dto.Id);
+            //_context.Movies.Remove(movieToDelete);
         }
     }
 }

@@ -16,6 +16,8 @@ namespace BookTicket.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(Configuration.GetConnectionString("WebApiDatabase"));
+            // Configure database fields for entities
+            // All string fields by default are nvarchar(max)
         }
 
         public DbSet<User> Users { get; set; }

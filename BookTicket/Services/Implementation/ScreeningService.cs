@@ -42,6 +42,7 @@ public class ScreeningService : IScreeningService
 
     public async Task<Screening> EditScreeningAsync(EditScreeningDto dto)
     {
+        var moveis = _context.Screenings.Include(x => x.Movie).FirstOrDefaultAsync(x => x.Id == dto.ScreeningId);
         var editScreening = await _context.Screenings.FirstOrDefaultAsync(s => s.Id == dto.ScreeningId);
         if (editScreening != null)
         {

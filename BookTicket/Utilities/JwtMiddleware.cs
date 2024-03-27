@@ -9,7 +9,8 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace BookTicket.utilities
 {
-    public class JwtMiddleware
+    // https://stackoverflow.com/questions/52204022/how-to-do-di-in-asp-net-core-middleware
+    public class JwtMiddleware : IMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly AppSettings _appSettings;
@@ -28,6 +29,11 @@ namespace BookTicket.utilities
                 await AttachUserToContext(context, userService, token);
 
             await _next(context);
+        }
+
+        public Task InvokeAsync(HttpContext context, RequestDelegate next)
+        {
+            throw new NotImplementedException();
         }
 
         private async Task AttachUserToContext(HttpContext context, IUserService userService, string token)
