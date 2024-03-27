@@ -20,6 +20,7 @@ public class ScreeningController : ControllerBase
 
     [HttpPost]
     [ProducesResponseType((int)HttpStatusCode.OK)]
+    // This wont even work
     public Task AddScreeningAsync(AddScreeningDto dto)
     {
         return _screeningService.AddScreeningAsync(dto);

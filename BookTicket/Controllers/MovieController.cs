@@ -12,6 +12,7 @@ namespace BookTicket.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Authorize("Admin")]
+    // Include ActionResult
     public class MovieController : ControllerBase
     {
         private readonly IMovieService _movieService;
@@ -23,13 +24,15 @@ namespace BookTicket.Controllers
 
         [HttpPost]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<Movie> AddMovieAsync(MovieDto dto)
+        // Post Should return Created instead of OK
+        public async Task<ActionResult<Movie>> AddMovieAsync(MovieDto dto)
         {
             return await _movieService.AddMovieAsync(dto);
         }
 
         [HttpDelete]
         [ProducesResponseType((int)HttpStatusCode.OK)]
+        // return NoContent()
         public void DeleteMovie(MovieDto dto)
         {
             _movieService.DeleteMovie(dto);
@@ -37,9 +40,15 @@ namespace BookTicket.Controllers
 
         [HttpGet("GetMovie/{id}")]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<Movie> GetMovieAsync(int id)
+        // Return notfound when movie is null
+        public async Task<ActionResult<Movie>> GetMovieAsync(int id)
         {
-            return await _movieService.GetMovieAsync(id);
+            var result = await _movieService.GetMovieAsync(id);
+
+            if(result is null) {
+                return NotFound();
+            }
+            return Ok(result);
         }
 
         [HttpGet("GetAllMovies")]

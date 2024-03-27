@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj": {}
+    "C:\\Users\\gkosz\\projects\\code_review\\bookTIcket\\BookTicket\\BookTicket.csproj": {}
   },
   "projects": {
-    "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj": {
+    "C:\\Users\\gkosz\\projects\\code_review\\bookTIcket\\BookTicket\\BookTicket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj",
+        "projectUniqueName": "C:\\Users\\gkosz\\projects\\code_review\\bookTIcket\\BookTicket\\BookTicket.csproj",
         "projectName": "BookTicket",
-        "projectPath": "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\BookTicket.csproj",
-        "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
-        "outputPath": "C:\\BookTIcket\\bookTIcket-1\\bookTIcket-1\\BookTicket\\BookTicket\\BookTicket\\obj\\",
+        "projectPath": "C:\\Users\\gkosz\\projects\\code_review\\bookTIcket\\BookTicket\\BookTicket.csproj",
+        "packagesPath": "C:\\Users\\gkosz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gkosz\\projects\\code_review\\bookTIcket\\BookTicket\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Piotr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gkosz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Wacom_SDK\\SDK": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -94,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
