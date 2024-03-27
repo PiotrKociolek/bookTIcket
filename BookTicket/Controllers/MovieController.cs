@@ -11,6 +11,7 @@ namespace BookTicket.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize("Admin")]
     public class MovieController : ControllerBase
     {
         private readonly IMovieService _movieService;
